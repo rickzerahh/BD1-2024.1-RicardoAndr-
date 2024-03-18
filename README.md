@@ -58,6 +58,17 @@ Um empréstimo envolve um ou mais livros. (N:M) /
 Um usuário pode realizar zero ou mais empréstimos. (0:N) /
 Um livro pode estar presente em zero ou mais empréstimos. (0:N)
 
+### Especialização-Generalização:
+
+- O uso do "Tipo" onde se encontra o "Aluno" e "Professor" dentro da Entidade "Usuário" mostra a aplicação da Especialização-Generalização.
+
+### Observações:
+
+- Um empréstimo contém livros que são selecionados pelo usuário durante o empréstimo.
+- Cada usuário pode realizar vários empréstimos ao longo do tempo.
+- Os livros podem ser emprestados em vários empréstimos feitos por diferentes usuários.
+- Cada empréstimo tem um status que indica em que estágio do processo de empréstimo ele se encontra, como "pendente", "em andamento" ou "concluído".
+
 ## Projeto 2: Sistema de Gestão de Vendas Online
 
 ### Entidades Principais:
@@ -96,6 +107,17 @@ Um produto pode estar presente em zero ou mais pedidos. (0:N)
 
 Um cliente pode fazer zero ou mais pedidos. (0:N) /
 Um pedido é realizado por um único cliente. (1:1)
+
+### Especialização-Generalização:
+
+- Nesse caso, eu não vi necessidade de adicionar uma Especialização-Generalização, só em algum caso de "Cliente Padrão", "Cliente Premium", mas para mim não faria sentido então não acrescentei. 
+
+### Observações:
+
+- Um pedido contém produtos que são selecionados pelo cliente durante a compra.
+- Cada cliente pode realizar vários pedidos ao longo do tempo.
+- Os produtos podem ser incluídos em vários pedidos feitos por diferentes clientes.
+- Cada pedido tem um status que indica em que estágio do processo de compra ele se encontra, como "em processo", "enviado" ou "entregue".
 
 ## Projeto 3: Sistema de Gerenciamento de Escola
 
@@ -165,3 +187,14 @@ Uma nota é atribuída a um único aluno. (1:N)
 Uma turma pode estar associada a uma ou mais disciplinas. (N:M) /
 Uma disciplina pode estar presente em uma ou mais turmas. (N:M) /
 Um professor pode ser responsável por uma ou mais disciplinas em uma turma. (N:M)
+
+### Especialização-Generalização:
+
+- Neste caso podemos aplicar a especialização-generalização para diferenciar entre diferentes tipos de usuários da escola, como "ALunos e "Professores", que podem ter atributos específicos, como descritos acima.
+
+### Observações:
+
+- Os alunos são matriculados em turmas específicas para cada ano letivo e período.
+- Os professores lecionam em turmas específicas e podem ser responsáveis por uma ou mais disciplinas.
+- Cada disciplina tem uma carga horária e pode ser lecionada em diferentes turmas.
+- As notas são atribuídas aos alunos em determinadas disciplinas, em um contexto de uma turma específica.
